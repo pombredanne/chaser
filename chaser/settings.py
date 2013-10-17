@@ -1,6 +1,7 @@
 # Django settings for chaser project.
 
 import dj_database_url
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -53,7 +54,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.environ.get('STATIC_ROOT', '')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
