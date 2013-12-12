@@ -1,0 +1,9 @@
+{% if chasers %}
+    <ul>
+    {% for chaser in chasers %}
+        <li><a href="/chaser/{{chaser.id}}">{{ chaser.title}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No chasers are available.</p>
+{% endif %}
